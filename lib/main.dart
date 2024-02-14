@@ -15,9 +15,11 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> _fetchData() async {
     try {
-      final response = await http.get(Uri.parse('https://sandbox.paratim.com/dealer'));
+      final response =
+          await http.get(Uri.parse('https://sandbox.paratim.com/dealer'));
       setState(() {
-        _status = 'Status Code: ${response.statusCode} ${response.request?.method} ';
+        _status =
+            'Status Code: ${response.statusCode} ${response.request?.method} ';
       });
     } catch (error) {
       setState(() {
@@ -53,4 +55,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
